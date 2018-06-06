@@ -3,12 +3,6 @@ Weather, everybody wants to know how it is going to be during the week. Will it 
 or sunny? Luckily for us, in the information age, there are open APIs to retrieve information
 about it.
 
-For this assignment you will be using the API from: http://openweathermap.org/api. The API key
-is provided at the end of the statement, or you can request your own by registering on the
-website for free.
-
-Full app assignment can be found [here](https://drive.google.com/open?id=0B7krWRgXRtNvMXFiQ21wcm9zc0E0dHIwRENiSTJxUUlHYTBV)
-
 #### Information:
  * AndroidArchitectureComponents are used for the app as recommended architecture approach
    - Cities and Weather information is saved into local db with Room, so without internet connection user can access cached information
@@ -23,10 +17,4 @@ Full app assignment can be found [here](https://drive.google.com/open?id=0B7krWR
  * Outdated information will be deleted from db automatically  
  * Resources and helpers for weather UI representation are used from Sunshine application
  
- 
-#### What can be added/improved
- - Perform weather request right after city is added to db
- - Confirmation dialog before delete the city
- - Handle loading state and loading errors
      
- 

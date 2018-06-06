@@ -1,0 +1,66 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.41'
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'io.fabric.tools:gradle:1.25.4'
+        // com.google.gms:google-services:3.3.1 cause an gradle sync error
+//        Cannot change dependencies of configuration ':app:api' after it has been included in dependency resolution
+        classpath 'com.google.gms:google-services:3.2.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+}
+
+ext {
+    VERSION_CODE = 1
+    VERSION_NAME = "0.1"
+
+    //Android
+    androidCompileSdkVersion = 26
+    androidBuildToolsVersion = "27.0.3"
+    androidMinSdkVersion = 16
+    androidTargetSdkVersion = 26
+
+
+    support_version = "27.1.1"
+    constraint_layout_version = "1.1.0"
+    arch_version = "1.1.1"
+    room_version = "1.1.0"
+
+    dagger_version = "2.16"
+
+    //data libraries
+    gsonVersion = '2.8.2'
+    retrofitVersion = '2.3.0'
+    okhttpVersion = '3.8.0'
+
+
+    // test libraries
+    espressoVersion = '2.2.2'
+    junitVersion = '4.12'
+    mockitoVersion = '1.5.0'
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

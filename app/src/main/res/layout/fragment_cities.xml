@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@+id/cl_root_view"
+                                                 xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 tools:context=".screens.home.CitiesFragment">
+
+    <TextView
+        android:id="@+id/tv_error_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:text="@string/msg_empty_cities_list"
+        android:visibility="invisible"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_cities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listItem="@layout/item_city"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        app:layout_anchor="@id/recycler_view_cities"
+
+        app:layout_anchorGravity="bottom|right|end"
+        app:srcCompat="@drawable/ic_add"/>
+
+    <!--logo required by https://developers.google.com/places/android-sdk/attributions?hl=en-->
+    <ImageView
+        android:id="@+id/iv_google_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+
+        app:layout_anchor="@id/recycler_view_cities"
+        app:layout_anchorGravity="bottom|left|start"
+        app:srcCompat="@drawable/powered_by_google_light"/>
+
+</android.support.design.widget.CoordinatorLayout>
